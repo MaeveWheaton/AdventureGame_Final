@@ -75,68 +75,115 @@ namespace AdventureGame
             }
             else if (page == 3) { page = 4; }
             else if (page == 4) { page = 5; }
-            else if (page == 5)
-            {
-                health = health - 2;
-                HealthCheck();
-                page = 6;
-            }
-            else if (page == 7)
-            {
-                health = health - 2;
-                HealthCheck();
-                tunnelMap = true;
-                page = 8;
-            }
+            else if (page == 5) { page = 6; }
+            else if (page == 7) { page = 8; }
             else if (page == 8) { page = 10; }
             else if (page == 9) { page = 10; }
-            else if (page == 10)
-            {
-                if (meleeWeapon == "polearm")
-                {
-                    health = health - 2;
-                }
-                else
-                {
-                    health = health - 3;
-                }
-                HealthCheck();
-                page = 12;
-            }
-            else if (page == 11)
-            {
-                health = health - 1;
-                HealthCheck();
-                page = 14;
-            }
+            else if (page == 10) { page = 12; }
+            else if (page == 11) { page = 14; }
             else if (page == 14) { page = 22; }
             else if (page == 15) { page = 22; }
-            else if (page == 16)
-            {
-                health = health - 1;
-                HealthCheck();
-                page = 18;
-            }
-            else if (page == 17)
-            {
-                if (meleeWeapon == "polearm")
-                {
-                    health = health - 2;
-                }
-                else
-                {
-                    health = health - 3;
-                }
-                HealthCheck();
-                page = 20;
-            }
+            else if (page == 16) { page = 18; }
+            else if (page == 17) { page = 20; }
             else if (page == 22) { page = 23; }
             else if (page == 23) { page = 1; }
             else if (page == 24) { page = 1; }
             else if (page == 25) { page = 26; }
             else if (page == 26) { page = 1; }
             else if (page == 27) { page = 1; }
+            else if (page == 28) { page = 29; }
+            else if (page == 29) { page = 30; }
+            else if (page == 30) { page = 32; }
+            else if (page == 31) { page = 34; }
+            else if (page == 32) { page = 36; }
+            else if (page == 33) { page = 40; }
+            else if (page == 34) { page = 40; }
+            else if (page == 35) { page = 40; }
+            else if (page == 36) { page = 38; }
+            else if (page == 37) { page = 38; }
+            else if (page == 38) { page = 42; }
+            else if (page == 39) { page = 42; }
+            else if (page == 40) { page = 42; }
+            else if (page == 41) { page = 42; }
+            else if (page == 42) { page = 45; }
+            else if (page == 43) { page = 45; }
+            else if (page == 44) { page = 45; }
+            else if (page == 45)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 50) { page = 49; }
+                else { page = 48; }
+            }
+            else if (page == 46)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 50) { page = 49; }
+                else { page = 48; }
+            }
+            else if (page == 47)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 50) { page = 49; }
+                else { page = 48; }
+            }
+            else if (page == 48) { page = 1; }
+            else if (page == 49) { page = 51; }
+            else if (page == 50) { page = 1; }
+            else if (page == 51) { page = 1; }
+            else if (page == 52) { page = 1; }
+            else if (page == 53) { page = 54; }
+            else if (page == 54) { page = 55; }
+            else if (page == 55) { page = 61; }
+            else if (page == 56) { page = 58; }
+            else if (page == 57) { page = 58; }
+            else if (page == 58) { page = 61; }
+            else if (page == 59) { page = 61; }
+            else if (page == 60) { page = 64; }
+            else if (page == 61) { page = 64; }
+            else if (page == 62) { page = 64; }
+            else if (page == 63) { page = 65; }
+            else if (page == 64) { page = 67; }
+            else if (page == 65) { page = 67; }
+            else if (page == 66) { page = 67; }
+            else if (page == 67)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 70; }
+                else { page = 71; }
+            }
+
             else if (page == 98) { page = 1; }
+            else if (page == 68)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 70; }
+                else { page = 71; }
+            }
+            else if (page == 69)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 73; }
+                else { page = 72; }
+            }
+            else if (page == 70) { page = 1; }
+            else if (page == 71)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 73; }
+                else { page = 72; }
+            }
+            else if (page == 72) { page = 1; }
+            else if (page == 73) { page = 1; }
+            else if (page == 74)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 77; }
+                else { page = 76; }
+            }
+            else if (page == 75) { page = 1; }
+            else if (page == 76) { page = 1; }
+            else if (page == 77) { page = 1; }
+            else if (page == 78) { page = 1; }
 
             DisplayPage();
         }
@@ -155,59 +202,19 @@ namespace AdventureGame
             }
             else if (page == 3) { page = 28; }
             else if (page == 4) { page = 3; }
-            else if (page == 5)
-            {
-                health = health - 2;
-                HealthCheck();
-                page = 6;
-            }
+            else if (page == 5) { page = 6; }
             else if (page == 7) { page = 9; }
             else if (page == 8) { page = 11; }
             else if (page == 9) { page = 11; }
-            else if (page == 10)
-            {
-                health = health - 1;
-                HealthCheck();
-                page = 13;
-            }
-            else if (page == 11)
-            {
-                if (rangeWeapon == "daggers")
-                {
-                    health = health - 2;
-                }
-                else
-                {
-                    health = health - 3;
-                }
-                HealthCheck();
-                page = 15;
-            }
+            else if (page == 10) { page = 13; }
+            else if (page == 11) { page = 15; }
             else if (page == 14) { page = 17; }
             else if (page == 15) { page = 17; }
-            else if (page == 16)
-            {
-                if (rangeWeapon == "daggers")
-                {
-                    health = health - 2;
-                }
-                else
-                {
-                    health = health - 3;
-                }
-                HealthCheck();
-                page = 19;
-            }
-            else if (page == 17)
-            {
-                health = health - 1;
-                HealthCheck();
-                page = 21;
-            }
+            else if (page == 16) { page = 19; }
+            else if (page == 17) { page = 21; }
             else if (page == 22)
             {
                 successPercent = randGen.Next(1, 101);
-
                 if (successPercent > 50) { page = 24; }
                 else { page = 25; }
             }
@@ -216,6 +223,67 @@ namespace AdventureGame
             else if (page == 25) { page = 27; }
             else if (page == 26) { page = 99; }
             else if (page == 27) { page = 99; }
+            else if (page == 28) { page = 3; }
+            else if (page == 29) { page = 31; }
+            else if (page == 30) { page = 33; }
+            else if (page == 31) { page = 35; }
+            else if (page == 32) { page = 37; }
+            else if (page == 33) { page = 41; }
+            else if (page == 34) { page = 41; }
+            else if (page == 35) { page = 41; }
+            else if (page == 36) { page = 39; }
+            else if (page == 37) { page = 39; }
+            else if (page == 38) { page = 43; }
+            else if (page == 39) { page = 43; }
+            else if (page == 40) { page = 43; }
+            else if (page == 41) { page = 43; }
+            else if (page == 42) { page = 46; }
+            else if (page == 43) { page = 46; }
+            else if (page == 44) { page = 46; }
+            else if (page == 45) { page = 50; }
+            else if (page == 46) { page = 50; }
+            else if (page == 47) { page = 50; }
+            else if (page == 48) { page = 99; }
+            else if (page == 49) { page = 52; }
+            else if (page == 50) { page = 99; }
+            else if (page == 51) { page = 99; }
+            else if (page == 52) { page = 99; }
+            else if (page == 53) { page = 3; }
+            else if (page == 54) { page = 56; }
+            else if (page == 55) { page = 60; }
+            else if (page == 56) { page = 59; }
+            else if (page == 57) { page = 59; }
+            else if (page == 58) { page = 60; }
+            else if (page == 59) { page = 62; }
+            else if (page == 60) { page = 63; }
+            else if (page == 61) { page = 63; }
+            else if (page == 62) { page = 63; }
+            else if (page == 63) { page = 66; }
+            else if (page == 64) { page = 68; }
+            else if (page == 65) { page = 68; }
+            else if (page == 66) { page = 68; }
+            else if (page == 67) { page = 69; }
+            else if (page == 68) { page = 69; }
+            else if (page == 69)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 75; }
+                else { page = 74; }
+            }
+            else if (page == 70) { page = 99; }
+            else if (page == 71)
+            {
+                successPercent = randGen.Next(1, 101);
+                if (successPercent > 40) { page = 75; }
+                else { page = 74; }
+            }
+            else if (page == 72) { page = 99; }
+            else if (page == 73) { page = 99; }
+            else if (page == 74) { page = 78; }
+            else if (page == 75) { page = 99; }
+            else if (page == 76) { page = 99; }
+            else if (page == 77) { page = 99; }
+            else if (page == 78) { page = 99; }
             else if (page == 98) { page = 99; }
 
              DisplayPage();
@@ -227,10 +295,17 @@ namespace AdventureGame
             else if (page == 22)
             {
                 successPercent = randGen.Next(1, 101);
-
                 if (successPercent > 50) { page = 24; }
                 else { page = 25; }
             }
+            else if (page == 38) { page = 44; }
+            else if (page == 39) { page = 44; }
+            else if (page == 40) { page = 44; }
+            else if (page == 41) { page = 44; }
+            else if (page == 42) { page = 47; }
+            else if (page == 43) { page = 47; }
+            else if (page == 44) { page = 47; }
+            else if (page == 54) { page = 57; }
 
             DisplayPage();
         }
@@ -338,6 +413,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    health = health - 2;
                     HealthCheck(); //check & update health bar - ends game if dead
                     break;
                 case 7:
@@ -363,6 +439,7 @@ namespace AdventureGame
                     option1Output.Text = "Go Right";
                     option2Output.Text = "Go Left";
 
+                    health = health - 2;
                     HealthCheck(); 
                     break;
                 case 9:
@@ -406,6 +483,8 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    if (meleeWeapon == "polearm") { health = health - 2; }
+                    else { health = health - 3; }
                     HealthCheck();
                     break;
                 case 13:
@@ -419,6 +498,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    health = health--;
                     HealthCheck();
                     break;
                 case 14:
@@ -428,6 +508,7 @@ namespace AdventureGame
                     option1Output.Text = "Go Left";
                     option2Output.Text = "Continue Straight";
 
+                    health = health--;
                     HealthCheck();
                     break;
                 case 15:
@@ -437,6 +518,8 @@ namespace AdventureGame
                     option1Output.Text = "Go Left";
                     option2Output.Text = "Continue Straight";
 
+                    if (rangeWeapon == "daggers") { health = health - 2; }
+                    else { health = health - 3; }
                     HealthCheck();
                     break;
                 case 16:
@@ -473,6 +556,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    health = health--;
                     HealthCheck();
                     break;
                 case 19:
@@ -486,6 +570,8 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    if (rangeWeapon == "daggers") { health = health - 2; }
+                    else { health = health - 3; }
                     HealthCheck();
                     break;
                 case 20:
@@ -499,6 +585,8 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    if (meleeWeapon == "polearm") { health = health - 2; }
+                    else { health = health - 3; }
                     HealthCheck();
                     break;
                 case 21:
@@ -512,6 +600,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
+                    health = health--;
                     HealthCheck();
                     break;
                 case 22:
@@ -579,6 +668,7 @@ namespace AdventureGame
                     option1Output.Text = "Surrender";
                     option2Output.Text = "Attack again";
 
+                    health = health - 2;
                     HealthCheck();
                     break;
                 case 26:
@@ -612,6 +702,20 @@ namespace AdventureGame
                     option2Output.Text = "No";
                     break;
                 case 28:
+                    break;                
+                case 32:
+                    health = health--;
+                    HealthCheck();
+                    break;
+                case 34:
+                    if (rangeWeapon == "daggers") { health = health--; }
+                    else { health = health - 2; }
+                    break;
+                case 36:
+                    health = health - 2;
+                    break;
+                case 40:
+                    health = health - 2;
                     break;
                 case 98:
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.sad_music);
