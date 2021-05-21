@@ -4,6 +4,8 @@
  * May 18, 2021
  * A short choose your adventure game with three storylines and many possible endings,
  * the variable 'page' is used to advance the story after each choice.
+ * Each scene has a picture and sound, not necessarily every page as I wanted to keep some consitentcy in certain scenes.
+ * (I tried using health-- to take away one health but it didn't work so I changed it back to health - 1, this happened before and the ++ didn't work)
 */
 using System;
 using System.Collections.Generic;
@@ -447,16 +449,22 @@ namespace AdventureGame
                     break;
                 case 10:
                     soundEffectPlayer = new SoundPlayer(Properties.Resources.slime);
-                    soundEffectPlayer.Play();
-                    Thread.Sleep(1000);
-                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
-                    bgmusicPlayer.Play();                    
+                    soundEffectPlayer.Play();                                                            
 
                     imageOutput.BackgroundImage = Properties.Resources.slime_monster;
 
                     storyOutput.Text = "The right tunnel leads to a room, in the centre is a large green monster. How will you attack?";
                     option1Output.Text = "Melee Weapon";
                     option2Output.Text = "Long Range Weapon";
+
+                    imageOutput.Refresh();
+                    storyOutput.Refresh();
+                    option1Output.Refresh();
+                    option2Output.Refresh();
+                    Thread.Sleep(1000);
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
+                    bgmusicPlayer.Play();
                     break;
                 case 11:
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
@@ -494,7 +502,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 14:
@@ -504,7 +512,7 @@ namespace AdventureGame
                     option1Output.Text = "Go Left";
                     option2Output.Text = "Continue Straight";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 15:
@@ -532,14 +540,20 @@ namespace AdventureGame
                 case 17:
                     soundEffectPlayer = new SoundPlayer(Properties.Resources.slime);
                     soundEffectPlayer.Play();
-                    Thread.Sleep(1000);
-                    bgmusicPlayer.Play();
 
                     imageOutput.BackgroundImage = Properties.Resources.slime_monster;
 
                     storyOutput.Text = "The tunnel leads to a room, in the centre is a large green monster. How will you attack?";
                     option1Output.Text = "Melee Weapon";
                     option2Output.Text = "Long Range Weapon";
+
+                    imageOutput.Refresh();
+                    storyOutput.Refresh();
+                    option1Output.Refresh();
+                    option2Output.Refresh();
+                    Thread.Sleep(1000);
+
+                    bgmusicPlayer.Play();
                     break;
                 case 18:
                     option1Button.Visible = false;
@@ -552,7 +566,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 19:
@@ -596,7 +610,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 22:
@@ -730,15 +744,21 @@ namespace AdventureGame
                 case 31:
                     soundEffectPlayer = new SoundPlayer(Properties.Resources.bear_growl);
                     soundEffectPlayer.Play();
-                    Thread.Sleep(2000);
-                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
-                    bgmusicPlayer.Play();
 
                     imageOutput.BackgroundImage = Properties.Resources.bear_monster;
 
                     storyOutput.Text = "While traveling through the forest you encounter a bear-like monster, a growl growing in its throat as it begins to swipe at you. How will you attack?";
                     option1Output.Text = "Long Range Weapon";
                     option2Output.Text = "Melee Weapon";
+
+                    imageOutput.Refresh();
+                    storyOutput.Refresh();
+                    option1Output.Refresh();
+                    option2Output.Refresh();
+                    Thread.Sleep(2000);
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
+                    bgmusicPlayer.Play();
                     break;
                 case 32:
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.creepy_music);
@@ -750,7 +770,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 33:
@@ -763,7 +783,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    if (meleeWeapon == "sword") { health = health--; }
+                    if (meleeWeapon == "sword") { health = health - 1; }
                     else { health = health - 2; }
                     HealthCheck();
                     break;
@@ -777,7 +797,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    if (rangeWeapon == "daggers") { health = health--; }
+                    if (rangeWeapon == "daggers") { health = health - 1; }
                     else { health = health - 2; }
                     HealthCheck();
                     break;
@@ -791,7 +811,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 36:
@@ -849,7 +869,7 @@ namespace AdventureGame
                     option2Output.Text = "Cut Through";
                     option3Output.Text = "Go Around";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 40:
@@ -884,7 +904,7 @@ namespace AdventureGame
                     option2Output.Text = "Cut Through";
                     option3Output.Text = "Go Around";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 42:
@@ -926,7 +946,7 @@ namespace AdventureGame
                     option2Output.Text = "Attack Long";
                     option3Output.Text = "Talk";
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 45:
@@ -945,7 +965,7 @@ namespace AdventureGame
                     }
 
                     if (meleeWeapon == "sword") { health = health - 2; }
-                    else { health = health--; }
+                    else { health = health - 1; }
                     HealthCheck();
                     break;
                 case 46:
@@ -963,7 +983,7 @@ namespace AdventureGame
                         option2Output.Text = "";
                     }
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 47:
@@ -981,7 +1001,7 @@ namespace AdventureGame
                         option2Output.Text = "";
                     }
 
-                    health = health--;
+                    health = health - 1;
                     HealthCheck();
                     break;
                 case 48:
