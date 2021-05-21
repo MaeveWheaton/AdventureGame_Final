@@ -5,7 +5,6 @@
  * A short choose your adventure game with three storylines and many possible endings,
  * the variable 'page' is used to advance the story after each choice.
  * Each scene has a picture and sound, not necessarily every page as I wanted to keep some consitentcy in certain scenes.
- * (I tried using health-- to take away one health but it didn't work so I changed it back to health - 1, this happened before and the ++ didn't work)
 */
 using System;
 using System.Collections.Generic;
@@ -413,7 +412,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck(); //check & update health bar - ends game if dead
                     break;
                 case 7:
@@ -439,7 +438,7 @@ namespace AdventureGame
                     option1Output.Text = "Go Right";
                     option2Output.Text = "Go Left";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck(); 
                     break;
                 case 9:
@@ -489,8 +488,8 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    if (meleeWeapon == "polearm") { health = health - 2; }
-                    else { health = health - 3; }
+                    if (meleeWeapon == "polearm") { health -= 2; }
+                    else { health -= 3; }
                     HealthCheck();
                     break;
                 case 13:
@@ -504,7 +503,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 14:
@@ -514,7 +513,7 @@ namespace AdventureGame
                     option1Output.Text = "Go Left";
                     option2Output.Text = "Continue Straight";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 15:
@@ -524,8 +523,8 @@ namespace AdventureGame
                     option1Output.Text = "Go Left";
                     option2Output.Text = "Continue Straight";
 
-                    if (rangeWeapon == "daggers") { health = health - 2; }
-                    else { health = health - 3; }
+                    if (rangeWeapon == "daggers") { health -= 2; }
+                    else { health -= 3; }
                     HealthCheck();
                     break;
                 case 16:
@@ -568,7 +567,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 19:
@@ -582,8 +581,8 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    if (rangeWeapon == "daggers") { health = health - 2; }
-                    else { health = health - 3; }
+                    if (rangeWeapon == "daggers") { health -= 2; }
+                    else { health -= 3; }
                     HealthCheck();
                     break;
                 case 20:
@@ -597,8 +596,8 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    if (meleeWeapon == "polearm") { health = health - 2; }
-                    else { health = health - 3; }
+                    if (meleeWeapon == "polearm") { health -= 2; }
+                    else { health -= 3; }
                     HealthCheck();
                     break;
                 case 21:
@@ -612,7 +611,7 @@ namespace AdventureGame
                     option1Output.Text = "";
                     option2Output.Text = "";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 22:
@@ -678,7 +677,7 @@ namespace AdventureGame
                     option1Output.Text = "Surrender";
                     option2Output.Text = "Attack again";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 26:
@@ -773,7 +772,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 33:
@@ -786,8 +785,8 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    if (meleeWeapon == "sword") { health = health - 1; }
-                    else { health = health - 2; }
+                    if (meleeWeapon == "sword") { health--; }
+                    else { health -= 2; }
                     HealthCheck();
                     break;
                 case 34:
@@ -800,8 +799,8 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    if (rangeWeapon == "daggers") { health = health - 1; }
-                    else { health = health - 2; }
+                    if (rangeWeapon == "daggers") { health--; }
+                    else { health -= 2; }
                     HealthCheck();
                     break;
                 case 35:
@@ -814,7 +813,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 36:
@@ -827,7 +826,7 @@ namespace AdventureGame
                     option1Output.Text = "Attack";
                     option2Output.Text = "Talk";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 37:
@@ -854,7 +853,7 @@ namespace AdventureGame
                     option2Output.Text = "Cut Through";
                     option3Output.Text = "Go Around";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 39:
@@ -872,7 +871,7 @@ namespace AdventureGame
                     option2Output.Text = "Cut Through";
                     option3Output.Text = "Go Around";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 40:
@@ -889,7 +888,7 @@ namespace AdventureGame
                     option2Output.Text = "Cut Through";
                     option3Output.Text = "Go Around";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 41:
@@ -907,7 +906,7 @@ namespace AdventureGame
                     option2Output.Text = "Cut Through";
                     option3Output.Text = "Go Around";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 42:
@@ -921,7 +920,7 @@ namespace AdventureGame
                     option2Output.Text = "Attack Long";
                     option3Output.Text = "Talk";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 43:
@@ -935,7 +934,7 @@ namespace AdventureGame
                     option2Output.Text = "Attack Long";
                     option3Output.Text = "Talk";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 44:
@@ -949,7 +948,7 @@ namespace AdventureGame
                     option2Output.Text = "Attack Long";
                     option3Output.Text = "Talk";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 45:
@@ -967,8 +966,8 @@ namespace AdventureGame
                         option2Output.Text = "";
                     }
 
-                    if (meleeWeapon == "sword") { health = health - 2; }
-                    else { health = health - 1; }
+                    if (meleeWeapon == "sword") { health -= 2; }
+                    else { health--; }
                     HealthCheck();
                     break;
                 case 46:
@@ -986,7 +985,7 @@ namespace AdventureGame
                         option2Output.Text = "";
                     }
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 47:
@@ -1004,10 +1003,12 @@ namespace AdventureGame
                         option2Output.Text = "";
                     }
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 48:
+                    option2Button.Visible = true;
+
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.sad_music);
                     bgmusicPlayer.Play();
 
@@ -1017,12 +1018,16 @@ namespace AdventureGame
                     option1Output.Text = "Yes";
                     option2Output.Text = "No";
                     break;
-                case 49:
+                case 49:                    
                     imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
 
                     storyOutput.Text = "You attack and the spirit collapses and begins to die.";
                     option1Output.Text = "Return To Village";
-                    if (spiritWater == true) { option2Output.Text = "Give Vial"; }
+                    if (spiritWater == true) 
+                    {
+                        option2Button.Visible = true;
+                        option2Output.Text = "Give Vial"; 
+                    }
                     else
                     {
                         option2Button.Visible = false;
@@ -1030,6 +1035,8 @@ namespace AdventureGame
                     }
                     break;
                 case 50:
+                    option2Button.Visible = true;
+
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.purify);
                     bgmusicPlayer.Play();
 
@@ -1040,6 +1047,8 @@ namespace AdventureGame
                     option2Output.Text = "No";
                     break;
                 case 51:
+                    option2Button.Visible = true;
+
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.foreboding_music);
                     bgmusicPlayer.Play();
 
@@ -1050,6 +1059,8 @@ namespace AdventureGame
                     option2Output.Text = "No";
                     break;
                 case 52:
+                    option2Button.Visible = true;
+
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.purify);
                     bgmusicPlayer.Play();
 
@@ -1111,7 +1122,7 @@ namespace AdventureGame
                     option1Output.Text = "Pick the Lock";
                     option2Output.Text = "Bribe a Guard";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 57:
@@ -1127,7 +1138,7 @@ namespace AdventureGame
                     option1Output.Text = "Pick the Lock";
                     option2Output.Text = "Bribe a Guard";
 
-                    health = health - 1;
+                    health--;
                     HealthCheck();
                     break;
                 case 58:
@@ -1140,48 +1151,218 @@ namespace AdventureGame
                 case 59:
                     imageOutput.BackgroundImage = Properties.Resources.dungeon_open_door;
 
-                    storyOutput.Text = "The guard opens the door for you, but you don't really have any gold so you have no choice but to kill the guards before they can throw you back in your cell. Once the guards are all down, you notice that only one other cell is occupied, a young boy sits inside, the keys hang on the opposite wall.";
+                    storyOutput.Text = "The guard opens the door for you, but you don't actually have any gold so you have no choice but to kill the guards before they can throw you back in your cell. Once the guards are all down, you notice that only one other cell is occupied, a young boy sits inside, the keys hang on the opposite wall.";
                     option1Output.Text = "Let the Boy out";
                     option2Output.Text = "Leave the Dungeon";
 
-                    health = health - 2;
+                    health -= 2;
                     HealthCheck();
                     break;
                 case 60:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.foreboding_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.city_stairs;
+
+                    storyOutput.Text = "You turn your back on the boy and attempt to sneak by the guards, but the boy, obviously upset at being left behind, shouts out and the guards turn. You deafeat them, to the boys dismay, and leave the dungeon. Once you leave the dungeon you enter an intersection.";
+                    option1Output.Text = "Left";
+                    option2Output.Text = "Right";
+
+                    health -= 2;
+                    HealthCheck();
                     break;
                 case 61:
+                    littleBoy = true;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.foreboding_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.city_stairs;
+
+                    storyOutput.Text = "You grab the keys and let the boy out, he thanks you quietly and then you both sneak past the guards. After extiting the dungeon, you split up and you enter an intersection.";
+                    option1Output.Text = "Left";
+                    option2Output.Text = "Right";
                     break;
                 case 62:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.foreboding_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.city_stairs;
+
+                    storyOutput.Text = "You turn your back on the boy and leave the dungeon, the boy shouting after you but theres no one to hear him. Once you leave the dungeon you enter an intersection.";
+                    option1Output.Text = "Left";
+                    option2Output.Text = "Right";
                     break;
                 case 63:
+                    imageOutput.BackgroundImage = Properties.Resources.dead_end;
+
+                    storyOutput.Text = "The right hallway leads to a dead end with guards patrolling, luckily they currently have their backs turned.";
+                    option1Output.Text = "Turn Around";
+                    option2Output.Text = "Attack Them";
                     break;
                 case 64:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music_2);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.throne_door;
+
+                    storyOutput.Text = "The left hallway leads to a fancy door, it's heavily guarded which means its clearly an important room, likely where the lord resides.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
                     break;
                 case 65:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music_2);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.throne_door;
+
+                    storyOutput.Text = "You slip back and down the other halway unnoticed. The other hallway leads to a fancy door, heavily guarded so likely an important room, possibly where the lord resides.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
                     break;
                 case 66:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music_2);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.throne_door;
+
+                    storyOutput.Text = "You attack the guards, finishing them off rather quickly and then turn around and go down the other halway. The other hallway leads to a fancy door, heavily guarded so likely an important room, possibly where the lord resides.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
+
+                    health -= 2;
+                    HealthCheck();
                     break;
                 case 67:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You charge the guards at the door, cutting through them one by one until no one stands between you and the door. You enter a large room with a throne on the opposite side of the room. The lord sits on the throne, more guards stationed around the room.";
+                    option1Output.Text = $"Attack Lord with {rangeWeapon}";
+                    option2Output.Text = "Talk";
+
+                    health -= 2;
+                    HealthCheck();
                     break;
                 case 68:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You kill many of the guards from a distance and then finish off the last of them so that no one stands between you and the door. You enter a large room with a throne on the opposite side of the room. The lord sits on the throne, more guards stationed around the room.";
+                    option1Output.Text = $"Attack Lord with {rangeWeapon}";
+                    option2Output.Text = "Talk";
+
+                    health--;
+                    HealthCheck();
                     break;
                 case 69:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You shout to the lord and tell him why you have come to kill him, you are here to take revenge for your parents. However, before you can talk for more than a couple seconds the guards attack you and you are preoccupied with taking them all down. Once you do though, you turn your attention back to the lord.";
+                    option1Output.Text = $"Attack Lord with {rangeWeapon}";
+                    option2Output.Text = "Talk";
+
+                    health -= 2;
+                    HealthCheck();
                     break;
                 case 70:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You draw your long range weapon and attack the lord, it sails over the guards and pierces the lord's heart, a perfect shot. The guards are bewildered and many turn and run to the dying lord.";
+                    if (littleBoy == true)
+                    {
+                        storyOutput.Text += " The little boy from the dungeon opens a secret passage in a nearby wall, he ushers you through and leads you out of the city. You have finally gotten your revenge and now you are free. Play again?";
+                    }
+                    else
+                    {
+                        storyOutput.Text += " After all those years you have finally gotten your revenge but the throne room is soon flooded with guards that drag you to the dungeons, although they have no leader your execution is sure to be soon. Play again?";
+                    }
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 71:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You attempt a long range attack but the lord moves at the last second and it misses the heart. The guards around the room jump into action and your focus becomes taking each of them down before you are able to turn back to the lord.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
+
+                    health -= 2;
+                    HealthCheck();
                     break;
                 case 72:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You finish off the guards and sprint across the room to the throne, focused on the lord, but you missed a guard and just as you reach the lord, the last standing guard kills you. It seems the lord will not pay for his transgressions quite yet. Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 73:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = $"You finish off the guards and sprint across the room to the throne, focused on the lord. The lords eyes widen in shock as you run him through with your {meleeWeapon}, 'For my parents' you say.";
+                    if (littleBoy == true)
+                    {
+                        storyOutput.Text += " The little boy from the dungeon opens a secret passage in a nearby wall, he ushers you through and leads you out of the city. You have finally gotten your revenge and now you are free. Play again?";
+                    }
+                    else
+                    {
+                        storyOutput.Text += " After all those years you have finally gotten your revenge but the throne room is soon flooded with guards that drag you to the dungeons, although they have no leader your execution is sure to be soon. Play again?";
+                    }
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 74:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You attempt a range attack now that the guards are out of the way, but you're weakened from the fighting and you miss again. You can hear rienforcements coming, you will soon be overwhelmed.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Surender";
+
+                    health--;
+                    HealthCheck();
                     break;
                 case 75:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You draw your long range weapon and attack the lord, it sails over the guards and pierces the lord's heart, a perfect shot despite your weakened state.";
+                    if (littleBoy == true)
+                    {
+                        storyOutput.Text += " The little boy from the dungeon opens a secret passage in a nearby wall, he ushers you through and leads you out of the city. You have finally gotten your revenge and now you are free. Play again?";
+                    }
+                    else
+                    {
+                        storyOutput.Text += " After all those years you have finally gotten your revenge but the throne room is soon flooded with guards that drag you to the dungeons, although they have no leader your execution is sure to be soon. Play again?";
+                    }
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 76:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = $"You attempt one last attack, rushing the lord with your {meleeWeapon}. But the rienforcements reach the throne room before you can get to the lord and they take you down before you can get your revenge. Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 77:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = $"You attempt one last attack, rushing the lord with your {meleeWeapon}. The lords eyes widen in shock as you run him through, 'For my parents' you say.";
+                    if (littleBoy == true)
+                    {
+                        storyOutput.Text += " The little boy from the dungeon opens a secret passage in a nearby wall, he ushers you through and leads you out of the city. You have finally gotten your revenge and now you are free. Play again?";
+                    }
+                    else
+                    {
+                        storyOutput.Text += " After all those years you have finally gotten your revenge but the throne room is soon flooded with guards that drag you to the dungeons, although they have no leader your execution is sure to be soon. Play again?";
+                    }
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
+                    break;
+                case 78:
+                    imageOutput.BackgroundImage = Properties.Resources.throne_room;
+
+                    storyOutput.Text = "You turn towards the doors and drop your weapons as hundreds of guard flood through. The lord decends from the throne and approaches you. 'Good try' the lord chuckles and fells you where you stand. Did you really expect mercy? Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 98:
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.sad_music);
