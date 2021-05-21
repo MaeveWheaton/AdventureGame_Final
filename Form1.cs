@@ -25,8 +25,8 @@ namespace AdventureGame
         int page = 1;
         string meleeWeapon, rangeWeapon;        
         bool tunnelMap = false;
-        //bool spiritWater = false;
-        //bool littleBoy = false;
+        bool spiritWater = false;
+        bool littleBoy = false;
         int health = 10;
         int successPercent;
                     
@@ -365,14 +365,10 @@ namespace AdventureGame
 
                     storyOutput.Text = "Now that you have your weapons you are ready to begin your journey for...";
                     option1Output.Text = "Riches";
-                    option2Button.Enabled = false; //disable unfinished storylines
-                    option3Button.Enabled = false;
-                    option2Output.Text = "Glory (coming soon)";
-                    option3Output.Text = "Revenge (coming soon)";
+                    option2Output.Text = "Glory";
+                    option3Output.Text = "Revenge";
                     break;
-                case 4:
-                    option2Button.Enabled = true; //enable buttons
-                    option3Button.Enabled = true;
+                case 4:                    
                     option3Button.Visible = false; //remove third option 
                     option3Output.Visible = false;
 
@@ -452,7 +448,7 @@ namespace AdventureGame
                 case 10:
                     soundEffectPlayer = new SoundPlayer(Properties.Resources.slime);
                     soundEffectPlayer.Play();
-                    Refresh();
+                    Thread.Sleep(1000);
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
                     bgmusicPlayer.Play();                    
 
@@ -536,7 +532,7 @@ namespace AdventureGame
                 case 17:
                     soundEffectPlayer = new SoundPlayer(Properties.Resources.slime);
                     soundEffectPlayer.Play();
-                    Refresh();
+                    Thread.Sleep(1000);
                     bgmusicPlayer.Play();
 
                     imageOutput.BackgroundImage = Properties.Resources.slime_monster;
@@ -609,9 +605,7 @@ namespace AdventureGame
                     nextButton.Visible = false;
                     option3Button.Visible = true;
                     option3Output.Visible = true;
-
-                    bgmusicPlayer = new SoundPlayer(Properties.Resources.final_battle_music);
-                    bgmusicPlayer.Play();
+                                        
                     soundEffectPlayer = new SoundPlayer(Properties.Resources.dragon_growl);
                     soundEffectPlayer.Play();
 
@@ -702,20 +696,362 @@ namespace AdventureGame
                     option2Output.Text = "No";
                     break;
                 case 28:
-                    break;                
+                    option3Button.Visible = false; //remove third option 
+                    option3Output.Visible = false;
+
+                    imageOutput.BackgroundImage = Properties.Resources.glory_map;
+
+                    storyOutput.Text = "In the south there is village terrorized by a monster in the nearby forest. Would you like to enbark on this quest?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
+                    break;
+                case 29:
+                    titleLabel.Text = "A Quest for Glory";
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.background_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.forest_edge;
+
+                    storyOutput.Text = "You travel to a small town and are directed to the forest, the villagers wish you luck. How will you enter the forest?";
+                    option1Output.Text = "Climb to the treetops";
+                    option2Output.Text = "Travel on ground";
+                    break;
+                case 30:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.monkey_moster;
+
+                    storyOutput.Text = "While traveling from branch to branch you encounter a monkey-like monster, its eyes wild as it charges you. How will you attack?";
+                    option1Output.Text = "Long Range Weapon";
+                    option2Output.Text = "Melee Weapon";
+                    break;
+                case 31:
+                    soundEffectPlayer = new SoundPlayer(Properties.Resources.bear_growl);
+                    soundEffectPlayer.Play();
+                    Thread.Sleep(2000);
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.battle_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.bear_monster;
+
+                    storyOutput.Text = "While traveling through the forest you encounter a bear-like monster, a growl growing in its throat as it begins to swipe at you. How will you attack?";
+                    option1Output.Text = "Long Range Weapon";
+                    option2Output.Text = "Melee Weapon";
+                    break;
                 case 32:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.creepy_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.tree_spirit;
+
+                    storyOutput.Text = "Slightly wounded, you continue on in the treetops until a tree spirit stops you in your tracks.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Talk";
+
                     health = health--;
                     HealthCheck();
                     break;
+                case 33:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.piano_melody);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.forest_pond;
+
+                    storyOutput.Text = "The monkey knocks you out of the treetops as it dies and you land hard on the ground. Beside you is a faintly glowing pond, a spirit floating in the middle.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Talk";
+
+                    if (meleeWeapon == "sword") { health = health--; }
+                    else { health = health - 2; }
+                    HealthCheck();
+                    break;
                 case 34:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.piano_melody);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.forest_pond;
+
+                    storyOutput.Text = "After defeating the monster, you continue on until you reach a faintly glowing  pond, a spirit floating in the middle.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Talk";
+
                     if (rangeWeapon == "daggers") { health = health--; }
                     else { health = health - 2; }
+                    HealthCheck();
+                    break;
+                case 35:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.piano_melody);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.forest_pond;
+
+                    storyOutput.Text = "After defeating the monster, you continue on until you reach a faintly glowing pond, a spirit floating in the middle.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Talk";
+
+                    health = health--;
+                    HealthCheck();
                     break;
                 case 36:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.piano_melody);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.forest_pond;
+
+                    storyOutput.Text = "You injure the spirit but knocks you from the treetops and you fall to the ground. Beside you is a faintly glowing pond, a spirit floating in the middle.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Talk";
+
                     health = health - 2;
+                    HealthCheck();
+                    break;
+                case 37:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.piano_melody);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.forest_pond;
+
+                    storyOutput.Text = "You tell the spirit you are here to defeat the evil spirit, it smirks and suggests you visit the pond spirit just through the trees. You climb down and find a faintly glowing pond, a spirit floating in the middle.";
+                    option1Output.Text = "Attack";
+                    option2Output.Text = "Talk";
+                    break;
+                case 38:
+                    option3Button.Visible = true;
+                    option3Output.Visible = true;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.forest_sound_1);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.thorns;
+
+                    storyOutput.Text = "You attack the pond spirit but it drags you underwater, you barely fight it off but manage to resurface. You continue on until you reach a wall of torns.";
+                    option1Output.Text = "Climb Over";
+                    option2Output.Text = "Cut Through";
+                    option3Output.Text = "Go Around";
+
+                    health = health - 2;
+                    HealthCheck();
+                    break;
+                case 39:
+                    option3Button.Visible = true;
+                    option3Output.Visible = true;
+                    spiritWater = true;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.forest_sound_1);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.thorns;
+
+                    storyOutput.Text = "You explain your intentions of defeating the evil spirit and the water spirit gives you a glowing vial, for a price, and sends you on your way. Eventually, you come across a wall of torns.";
+                    option1Output.Text = "Climb Over";
+                    option2Output.Text = "Cut Through";
+                    option3Output.Text = "Go Around";
+
+                    health = health--;
+                    HealthCheck();
                     break;
                 case 40:
+                    option3Button.Visible = true;
+                    option3Output.Visible = true;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.forest_sound_1);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.thorns;
+
+                    storyOutput.Text = "You attack the pond spirit but it drags you underwater, you barely fight it off but manage to resurface. You continue on until you reach a wall of torns.";
+                    option1Output.Text = "Climb Over";
+                    option2Output.Text = "Cut Through";
+                    option3Output.Text = "Go Around";
+
                     health = health - 2;
+                    HealthCheck();
+                    break;
+                case 41:
+                    option3Button.Visible = true;
+                    option3Output.Visible = true;
+                    spiritWater = true;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.forest_sound_1);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.thorns;
+
+                    storyOutput.Text = "You explain your intentions of defeating the evil spirit and the water spirit gives you a glowing vial, for a price, and sends you on your way. Eventually, you come across a wall of torns.";
+                    option1Output.Text = "Climb Over";
+                    option2Output.Text = "Cut Through";
+                    option3Output.Text = "Go Around";
+
+                    health = health--;
+                    HealthCheck();
+                    break;
+                case 42:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.final_battle_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = "You climb over the torns, falling often and getting very scratched up. On the other side, you face the evil spirit.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
+                    option3Output.Text = "Talk";
+
+                    health = health - 2;
+                    HealthCheck();
+                    break;
+                case 43:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.final_battle_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = "You cut through the torns but they grow back behind you and you get very scratched up. On the other side, you face the evil spirit.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
+                    option3Output.Text = "Talk";
+
+                    health = health - 2;
+                    HealthCheck();
+                    break;
+                case 44:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.final_battle_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = "It takes a while, but eventually you find an opening just large enough for you to navigate through and obtain only minor injuries. On the other side, you face the evil spirit.";
+                    option1Output.Text = "Attack Melee";
+                    option2Output.Text = "Attack Long";
+                    option3Output.Text = "Talk";
+
+                    health = health--;
+                    HealthCheck();
+                    break;
+                case 45:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = $"You attack with your {meleeWeapon}. The spirit is injured but attacks you, controlling forest around you.";
+                    option1Output.Text = "Attack Again";
+                    if (spiritWater == true) { option2Output.Text = "Throw Vial"; }
+                    else
+                    {
+                        option2Button.Visible = false;
+                        option2Output.Text = "";
+                    }
+
+                    if (meleeWeapon == "sword") { health = health - 2; }
+                    else { health = health--; }
+                    HealthCheck();
+                    break;
+                case 46:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = "You attack from a distance. The spirit is injured but attacks you, controlling forest around you, you are lucky to be far enough away that the attack weakens before hitting you.";
+                    option1Output.Text = "Attack Again";
+                    if (spiritWater == true) { option2Output.Text = "Throw Vial"; }
+                    else
+                    {
+                        option2Button.Visible = false;
+                        option2Output.Text = "";
+                    }
+
+                    health = health--;
+                    HealthCheck();
+                    break;
+                case 47:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = "You attempt to converse with the spirit but does not respond and attacks you, controlling forest around you. However, you notice that it seems to glow the same way as the water in the pond.";
+                    option1Output.Text = "Attack Again";
+                    if (spiritWater == true) { option2Output.Text = "Throw Vial"; }
+                    else
+                    {
+                        option2Button.Visible = false;
+                        option2Output.Text = "";
+                    }
+
+                    health = health--;
+                    HealthCheck();
+                    break;
+                case 48:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.sad_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.gravestone;
+
+                    storyOutput.Text = "Unfortunately, you fail to deafeat the evil spirit and become yet another of it's victims. So much for glory. Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
+                    break;
+                case 49:
+                    imageOutput.BackgroundImage = Properties.Resources.evil_spirit;
+
+                    storyOutput.Text = "You attack and the spirit collapses and begins to die.";
+                    option1Output.Text = "Return To Village";
+                    if (spiritWater == true) { option2Output.Text = "Give Vial"; }
+                    else
+                    {
+                        option2Button.Visible = false;
+                        option2Output.Text = "";
+                    }
+                    break;
+                case 50:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.purify);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.purified_spirit;
+
+                    storyOutput.Text = "You throw the vial at the evil spirit and it shatters, spilling its contents all over the spirit. A shell falls off of the spirit and the forest become brighter. You return to the village a hero, song will be sung and your story will be told forever. Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
+                    break;
+                case 51:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.foreboding_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.dying_forest;
+
+                    storyOutput.Text = "You leave the dying spirit and return to the village. They celebrate your return and you seem to be a hero, but over time the forest begins to die and everything around dies along with it, what did you miss? Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
+                    break;
+                case 52:
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.purify);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.purified_spirit;
+
+                    storyOutput.Text = "You give the vial to the dying the evil spirit and it splashes the contents all over itseld. A shell falls off of the spirit and the forest become brighter. You return to the village a hero, song will be sung and your story will be told forever. Play again?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
+                    break;
+                case 53:
+                    break;
+                case 54:
+                    titleLabel.Text = "A Quest for Revenge";
+                    option3Button.Visible = true;
+                    option3Output.Visible = true;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.soft_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.mountain_door;
+
+                    storyOutput.Text = "You arrive at the mountain to find a door with strange inscription. Answer the riddle and ye shall enter, it says. People make me, keep me, change me, raise me, even though I can be very dirty. What am I?";
+                    option1Output.Text = "Child";
+                    option2Output.Text = "Plant";
+                    option3Output.Text = "Money";
                     break;
                 case 98:
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.sad_music);
@@ -752,7 +1088,7 @@ namespace AdventureGame
                 default:
                     break;
             }
-        }                
+        }
 
         public void HealthCheck() //if health = 0, common end page for health death
         {

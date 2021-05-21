@@ -99,6 +99,25 @@ namespace AdventureGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream bear_growl {
+            get {
+                return ResourceManager.GetStream("bear_growl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bear_monster {
+            get {
+                object obj = ResourceManager.GetObject("bear_monster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap bow_arrows {
@@ -164,6 +183,26 @@ namespace AdventureGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dying_forest {
+            get {
+                object obj = ResourceManager.GetObject("dying_forest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap evil_spirit {
+            get {
+                object obj = ResourceManager.GetObject("evil_spirit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream final_battle_music {
@@ -178,6 +217,16 @@ namespace AdventureGame.Properties {
         internal static System.IO.UnmanagedMemoryStream foreboding_music {
             get {
                 return ResourceManager.GetStream("foreboding_music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forest_edge {
+            get {
+                object obj = ResourceManager.GetObject("forest_edge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -261,6 +310,16 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap monkey_moster {
+            get {
+                object obj = ResourceManager.GetObject("monkey_moster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mountain_door {
             get {
                 object obj = ResourceManager.GetObject("mountain_door", resourceCulture);
@@ -304,6 +363,25 @@ namespace AdventureGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("polearm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap purified_spirit {
+            get {
+                object obj = ResourceManager.GetObject("purified_spirit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream purify {
+            get {
+                return ResourceManager.GetStream("purify", resourceCulture);
             }
         }
         
@@ -386,6 +464,16 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thorns {
+            get {
+                object obj = ResourceManager.GetObject("thorns", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap throwing_knives {
             get {
                 object obj = ResourceManager.GetObject("throwing_knives", resourceCulture);
@@ -399,6 +487,16 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap treasure {
             get {
                 object obj = ResourceManager.GetObject("treasure", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tree_spirit {
+            get {
+                object obj = ResourceManager.GetObject("tree_spirit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

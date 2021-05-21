@@ -49,7 +49,7 @@ namespace AdventureGame
             // 
             // imageOutput
             // 
-            this.imageOutput.BackgroundImage = global::AdventureGame.Properties.Resources.start_hut;
+            this.imageOutput.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imageOutput.BackgroundImage")));
             this.imageOutput.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imageOutput.Location = new System.Drawing.Point(184, 296);
             this.imageOutput.Name = "imageOutput";
@@ -162,13 +162,13 @@ namespace AdventureGame
             // 
             // storyOutput
             // 
-            this.storyOutput.Font = new System.Drawing.Font("Mongolian Baiti", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storyOutput.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storyOutput.Location = new System.Drawing.Point(55, 113);
             this.storyOutput.Name = "storyOutput";
             this.storyOutput.Size = new System.Drawing.Size(909, 180);
             this.storyOutput.TabIndex = 12;
-            this.storyOutput.Text = "Consider your every choice, it may or may not have effect later in the story. Cli" +
-    "ck the bullet point next to the option to make your choice.\r\n\r\n";
+            this.storyOutput.Text = "Consider your every choice carefully. Click the bullet point next to the option t" +
+    "o make your choice. ";
             this.storyOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.storyOutput.Visible = false;
             // 

@@ -162,9 +162,6 @@
     <None Include="Resources\gravestone.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\start_hut.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\final_battle_music.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +196,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sad_music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forest_edge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dying_forest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purified_spirit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evil_spirit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thorns.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree_spirit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear_monster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monkey_moster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear_growl.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_hut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purify.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
