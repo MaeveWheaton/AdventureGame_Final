@@ -130,6 +130,9 @@
   <data name="battle_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battle_music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="battle_music_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battle_music_2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="bear_growl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bear_growl.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -139,8 +142,17 @@
   <data name="bow_arrows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bow_arrows.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="city_gates" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city_gates.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city_stairs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city_stairs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="creepy_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\creepy_music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dead_end" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dead_end.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dragon_breathe_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dragon_breathe_fire.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -156,6 +168,12 @@
   </data>
   <data name="dramatic_music_start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dramatic_music_start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dungeon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dungeon_open_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dungeon_open_door.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dying_forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dying_forest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,11 +259,20 @@
   <data name="start_hut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start_hut.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="suspenceful_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suspenceful_music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="symphony_sounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\symphony_sounds.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="thorns" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thorns.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="throne_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\throne_door.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="throne_room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\throne_room.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="throwing_knives" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\throwing_knives.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

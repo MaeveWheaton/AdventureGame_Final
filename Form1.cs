@@ -330,6 +330,7 @@ namespace AdventureGame
         {
             switch (page)
             {
+                // intro
                 case 1:
                     //design changes
                     titleLabel.Text = "Choose Your Weapon";
@@ -370,6 +371,7 @@ namespace AdventureGame
                     option2Output.Text = "Glory";
                     option3Output.Text = "Revenge";
                     break;
+                // Riches Storyline
                 case 4:                    
                     option3Button.Visible = false; //remove third option 
                     option3Output.Visible = false;
@@ -709,8 +711,9 @@ namespace AdventureGame
                     option1Output.Text = "Yes";
                     option2Output.Text = "No";
                     break;
+                // Glory Storyline
                 case 28:
-                    option3Button.Visible = false; //remove third option 
+                    option3Button.Visible = false;
                     option3Output.Visible = false;
 
                     imageOutput.BackgroundImage = Properties.Resources.glory_map;
@@ -1056,22 +1059,129 @@ namespace AdventureGame
                     option1Output.Text = "Yes";
                     option2Output.Text = "No";
                     break;
+                // Revenge Storyline
                 case 53:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    imageOutput.BackgroundImage = Properties.Resources.revenge_map;
+
+                    storyOutput.Text = "Many years ago a lord from the North raided your hometown and killed your parents, today you are finally ready to seek your renvenge. Would you like to enbark on this quest?";
+                    option1Output.Text = "Yes";
+                    option2Output.Text = "No";
                     break;
                 case 54:
                     titleLabel.Text = "A Quest for Revenge";
                     option3Button.Visible = true;
                     option3Output.Visible = true;
 
-                    bgmusicPlayer = new SoundPlayer(Properties.Resources.soft_music);
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.dramatic_music_start);
                     bgmusicPlayer.Play();
 
-                    imageOutput.BackgroundImage = Properties.Resources.mountain_door;
+                    imageOutput.BackgroundImage = Properties.Resources.city_gates;
 
-                    storyOutput.Text = "You arrive at the mountain to find a door with strange inscription. Answer the riddle and ye shall enter, it says. People make me, keep me, change me, raise me, even though I can be very dirty. What am I?";
-                    option1Output.Text = "Child";
-                    option2Output.Text = "Plant";
-                    option3Output.Text = "Money";
+                    storyOutput.Text = "You travel to the city of the lord, there is a huge wall surrounding the city and the gates are heavily guarded. However, you've spent years gathering information and you know of a possible secret entrance. How will you enter the city?";
+                    option1Output.Text = "Search for Secret Entrance";
+                    option2Output.Text = "Scale the Wall";
+                    option3Output.Text = "Trick Guards at Main Entrance";
+                    break;
+                case 55:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.suspenceful_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.dungeon_open_door;
+
+                    storyOutput.Text = "You find the entrance and enter through a tunnel, eventually the tunnel end and you exit into what appears to be the dungeons. Only one cell is occupied, a young boy sits inside. The keys hang on the opposite wall and the guards at the end of the hall seem distracted for now.";
+                    option1Output.Text = "Let the Boy out";
+                    option2Output.Text = "Sneak by Guards";
+                    break;
+                case 56:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.suspenceful_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.dungeon;
+
+                    storyOutput.Text = "You scale the wall, but as soon as you reach the top you are spotted by the many soldiers guarding the top of the wall, you don't even have a chance to fight back before you are captured and jailed. How do you escape your cell?";
+                    option1Output.Text = "Pick the Lock";
+                    option2Output.Text = "Bribe a Guard";
+
+                    health = health - 1;
+                    HealthCheck();
+                    break;
+                case 57:
+                    option3Button.Visible = false;
+                    option3Output.Visible = false;
+
+                    bgmusicPlayer = new SoundPlayer(Properties.Resources.suspenceful_music);
+                    bgmusicPlayer.Play();
+
+                    imageOutput.BackgroundImage = Properties.Resources.dungeon;
+
+                    storyOutput.Text = "You attempt to trick the guards at the main entrance into letting you in but they find you suspicious and decide to keep you in the dungeons until your story can be verified. How do you escape your cell?";
+                    option1Output.Text = "Pick the Lock";
+                    option2Output.Text = "Bribe a Guard";
+
+                    health = health - 1;
+                    HealthCheck();
+                    break;
+                case 58:
+                    imageOutput.BackgroundImage = Properties.Resources.dungeon_open_door;
+
+                    storyOutput.Text = "You pick the lock quietly while the guards backs are turned and exit your cell. You notice that only one other cell is occupied, a young boy sits inside, the keys hang on the opposite wall.";
+                    option1Output.Text = "Let the Boy out";
+                    option2Output.Text = "Sneak by Guards";
+                    break;
+                case 59:
+                    imageOutput.BackgroundImage = Properties.Resources.dungeon_open_door;
+
+                    storyOutput.Text = "The guard opens the door for you, but you don't really have any gold so you have no choice but to kill the guards before they can throw you back in your cell. Once the guards are all down, you notice that only one other cell is occupied, a young boy sits inside, the keys hang on the opposite wall.";
+                    option1Output.Text = "Let the Boy out";
+                    option2Output.Text = "Leave the Dungeon";
+
+                    health = health - 2;
+                    HealthCheck();
+                    break;
+                case 60:
+                    break;
+                case 61:
+                    break;
+                case 62:
+                    break;
+                case 63:
+                    break;
+                case 64:
+                    break;
+                case 65:
+                    break;
+                case 66:
+                    break;
+                case 67:
+                    break;
+                case 68:
+                    break;
+                case 69:
+                    break;
+                case 70:
+                    break;
+                case 71:
+                    break;
+                case 72:
+                    break;
+                case 73:
+                    break;
+                case 74:
+                    break;
+                case 75:
+                    break;
+                case 76:
+                    break;
+                case 77:
                     break;
                 case 98:
                     bgmusicPlayer = new SoundPlayer(Properties.Resources.sad_music);

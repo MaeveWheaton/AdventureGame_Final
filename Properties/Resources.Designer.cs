@@ -101,6 +101,15 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream battle_music_2 {
+            get {
+                return ResourceManager.GetStream("battle_music_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream bear_growl {
             get {
                 return ResourceManager.GetStream("bear_growl", resourceCulture);
@@ -128,11 +137,41 @@ namespace AdventureGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap city_gates {
+            get {
+                object obj = ResourceManager.GetObject("city_gates", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap city_stairs {
+            get {
+                object obj = ResourceManager.GetObject("city_stairs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream creepy_music {
             get {
                 return ResourceManager.GetStream("creepy_music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dead_end {
+            get {
+                object obj = ResourceManager.GetObject("dead_end", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -179,6 +218,26 @@ namespace AdventureGame.Properties {
         internal static System.IO.UnmanagedMemoryStream dramatic_music_start {
             get {
                 return ResourceManager.GetStream("dramatic_music_start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dungeon {
+            get {
+                object obj = ResourceManager.GetObject("dungeon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dungeon_open_door {
+            get {
+                object obj = ResourceManager.GetObject("dungeon_open_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -455,6 +514,15 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream suspenceful_music {
+            get {
+                return ResourceManager.GetStream("suspenceful_music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream symphony_sounds {
             get {
                 return ResourceManager.GetStream("symphony_sounds", resourceCulture);
@@ -467,6 +535,26 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap thorns {
             get {
                 object obj = ResourceManager.GetObject("thorns", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap throne_door {
+            get {
+                object obj = ResourceManager.GetObject("throne_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap throne_room {
+            get {
+                object obj = ResourceManager.GetObject("throne_room", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

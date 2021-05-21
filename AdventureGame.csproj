@@ -230,5 +230,32 @@
   <ItemGroup>
     <None Include="Resources\purify.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\throne_door.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead_end.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\throne_room.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\city_stairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon_open_door.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\city_gates.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battle_music_2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspenceful_music.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
